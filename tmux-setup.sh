@@ -40,7 +40,6 @@ popd
 ln -s -f ~/git/.tmux/.tmux.conf   ~/.tmux.conf
 
 
-
 # copy local editable conf from repo to home
 cp ./muxconf/.tmux.conf.local ~/.tmux.conf.local
 
