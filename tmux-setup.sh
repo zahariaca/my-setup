@@ -27,17 +27,25 @@ ruby -v
 
 # make directory for git
 mkdir ~/git
+
 pusdh ~/git
 
 # clone tmux and tmuxinator
-
 git clone https://github.com/gpakosz/.tmux.git
+
+# return to this git folder
+popd
 
 # link .tmux.conf from repo to ~/.tmux.conf
 ln -s -f ~/git/.tmux/.tmux.conf   ~/.tmux.conf
 
+
+
 # copy local editable conf from repo to home
-cp ~/git/.tmux/.tmux.conf.local ~/.tmux.conf.local
+cp ./muxconf/.tmux.conf.local ~/.tmux.conf.local
 
 # install tmuxinator
 gem install tmuxinator
+
+# copy tmuxinator conf
+cp ./muxconf/test.yml ~/.config/tmuxinator/test.yml
